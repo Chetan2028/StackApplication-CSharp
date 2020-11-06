@@ -12,6 +12,11 @@ namespace StackApplication
             linkedListStack.Push(30);
             linkedListStack.Push(56);
             linkedListStack.Display();
+            linkedListStack.Peek();
+            linkedListStack.Pop();
+            linkedListStack.Display();
+            linkedListStack.IsEmpty();
+            linkedListStack.Display();
         }
     }
 }

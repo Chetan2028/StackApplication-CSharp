@@ -34,11 +34,55 @@ namespace StackApplication
             top = newNode;
             Console.WriteLine("{0} pushed into stack",newData);
         }
+
+        /// <summary>
+        /// Peeks this instance.
+        /// </summary>
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("\n{0} is in the top of stack",top.data);
+        }
+
+        /// <summary>
+        /// Pops this instance.
+        /// </summary>
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} popped from stack",top.data);
+            top = top.next;
+        }
+
+        /// <summary>
+        /// Determines whether this instance is empty.
+        /// </summary>
+        public void IsEmpty()
+        {
+            while (top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
         /// <summary>
         /// Displays this instance.
         /// </summary>
         public void Display()
         {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
             Node temp = top;
             while (temp != null)
             {
@@ -46,7 +90,5 @@ namespace StackApplication
                 temp = temp.next;
             }
         }
-
-
     }
 }
