@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StackApplication
 {
-    class LinkedListStack
+    public class LinkedListStack
     {
         public Node top;
 
